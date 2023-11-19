@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block titulo %}
+  <title>Contactos</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+{% endblock %}
+
+{% block contenido %}
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <br />
+        <h1><b><i>Listado de Contactos</i></b></h1>
+        <hr />
+        <br>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th scope="col">id</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Telefono</th>
+              <th scope="col">Descipcion</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for Contacto in contactos %}
+              <tr>
+                <td>{{ Contacto.id }}</td>
+                <td>{{ Contacto.nombre }}</td>
+                <td>{{ Contacto.correo }}</td>
+                <td>{{ Contacto.celular }}</td>
+                <td>{{ Contacto.Descripcion }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <div class="card-footer text-muted">
+            <a href="{% url 'Contacto' %}" class="btn btn-info">Volver <i class="bi bi-backspace"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

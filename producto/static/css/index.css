@@ -1,0 +1,18 @@
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+}
+
+body {
+    transition: background-color 2.5s ease;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 2.5s ease;
+}
+
+a:hover {
+    color: #e74c3c;
+}
