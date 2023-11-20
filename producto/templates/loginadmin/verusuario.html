@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block titulo %}
+  <title>Productos</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+{% endblock %}
+
+{% block contenido %}
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <br />
+        <h1><b><i>Listado de Usuarios</i></b></h1>
+        <hr />
+        <br>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th scope="col">id</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Contraseña</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for Usuarios in usuario %}
+              <tr>
+                <td>{{ Usuarios.id }}</td>
+                <td>{{ Usuarios.nombre }}</td>
+                <td>{{ Usuarios.Apellido }}</td>
+                <td>{{ Usuarios.correo }}</td>
+                <td>{{ Usuarios.Contrasena }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <div class="card-footer text-muted">
+            <a href="{% url 'ajustes' %}" class="btn btn-info">Volver <i class="bi bi-backspace"></i></a>
+          </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

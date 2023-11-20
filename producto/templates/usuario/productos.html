@@ -1,0 +1,36 @@
+{% extends 'baseu.html' %}
+
+{% load static %}
+
+{% block titulo %}
+  <title>Productos Usuario</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+{% endblock %}
+
+{% block contenido %}
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <br />
+        <h1><b><i>Listado de Productos Usuario</i></b></h1>
+        <hr />
+        <div class="row">
+         {% for Productos in productosu %}
+            <div class="col-md-3 mb-2 mb-sm-0">
+               <div class="card">
+                  <img src="{{ Productos.imagen.url }}" height="100" />
+                  <div class="card-body">
+                     <h5>{{ Productos.nombre }}</h5>
+                     <p>{{ Productos.descripcion }}</p>
+                     <hr />
+                     <p>${{ Productos.precio }}</p>
+                     <a href="#" class="btn btn-primary">Ver mas</a>
+                  </div>
+               </div>
+            </div>
+         {% endfor %}
+      </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

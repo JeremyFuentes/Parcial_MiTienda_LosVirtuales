@@ -31,13 +31,13 @@ class Usuarios(models.Model):
     nombre = models.TextField(null=False, max_length=50, verbose_name="Nombre")
     Apellido = models.TextField(null=False, max_length=500, verbose_name="Apellido")
     correo = models.EmailField(unique=True, null=False, max_length=50, verbose_name="Correo")
-    Contraseña = models.CharField(null=False, max_length=50, verbose_name="Contraseña")
+    Contrasena = models.CharField(null=False, max_length=50, verbose_name="Contraseña")
     
 class Admin(models.Model):
     id = models.AutoField(primary_key=True, auto_created=True)
     nombre = models.TextField(null=False, max_length=50, verbose_name="Nombre Admin")
     Apellido = models.TextField(null=False, max_length=500, verbose_name="Apellido Admin")
     correo = models.EmailField(unique=True, null=False, max_length=50, verbose_name="Correo Admin")
-    Contraseña = models.CharField(null=False, max_length=50, verbose_name="Contra Admin")
+    Contrasena = models.CharField(null=False, max_length=50, verbose_name="Contra Admin")
     celular = models.IntegerField(null=False, verbose_name="Celular Admin")
     Direccion = models.TextField(null=False, verbose_name="Direc Admin")

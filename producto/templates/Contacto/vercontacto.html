@@ -23,6 +23,7 @@
               <th scope="col">Correo</th>
               <th scope="col">Telefono</th>
               <th scope="col">Descipcion</th>
+              <th scope="col">Acciones</th>
             </tr>
           </thead>
           <tbody>
@@ -33,6 +34,9 @@
                 <td>{{ Contacto.correo }}</td>
                 <td>{{ Contacto.celular }}</td>
                 <td>{{ Contacto.Descripcion }}</td>
+                <td>
+                  <button class="btn btn-outline-danger" onclick="confirmarEliminacion({{ Contacto.id }})"><i class="bi bi-trash"></i></button>
+                </td>
               </tr>
             {% endfor %}
           </tbody>
@@ -43,4 +47,15 @@
       </div>
     </div>
   </div>
+  <script>
+    function confirmarEliminacion(productoId) {
+      var respuesta = confirm("¿Estás seguro de que deseas eliminar este producto?");
+      if (respuesta == true) {
+        var eliminarUrl = "{% url 'eliminar_contacto' 0 %}".replace('0', productoId);
+        window.location.href = eliminarUrl;
+      } else {
+        // Operación cancelada
+      }
+    }
+  </script>
 {% endblock %}

@@ -20,7 +20,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'inicio' %}">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'inicioadmin' %}">Inicio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{% url 'productos' %}">Productos</a>
@@ -31,12 +31,16 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{% url 'Contacto' %}">Contacto</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'ajustes' %}">Ajustes</a>
+              </li>
             </ul>
             <form class="d-flex" role="search">
+              <li class="nav-item d-flex align-items-center" style="margin-left: 10px;">
+                <label class="text-white lbl-user"><i class="bi bi-person-circle"></i> Usuario Administrador </label>
+              </li>
               <li class="nav-item">
-                <a href="{% url 'login' %}" class="btn btn-outline-primary">
-                  <i class="bi bi-door-open"></i> Iniciar Sesión
-                </a>
+                <a href="{% url "inicio" %}" class="btn btn-outline-danger" type="submit"> <i class="bi bi-escape"></i></a>
               </li>
             </form>
           </div>

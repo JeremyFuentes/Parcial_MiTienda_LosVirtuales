@@ -20,27 +20,25 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'iniciou' %}">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'inicio' %}">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'productosu' %}">Productos</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'productosi' %}">Productos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'AcercaDeu' %}">Acerca de</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'AcercaDei' %}">Acerca de</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'Contactou' %}">Contacto</a>
-              </li>
-            <li class="nav-item d-flex align-items-center " style="margin-right: 10px; margin-left: 10px;">
-                <label class="text-white lbl-user"><i class="bi bi-person-circle"></i> Nombre Usuario </label>
-              </li>
-              <li class="nav-item d-flex align-items-center"  style="margin-right: 10px;">
-                <a href="{% url 'inicio' %}" class="btn btn-outline-danger" type="submit"><i class="bi bi-escape"></i></a>
-              </li>
-              <li class="nav-item d-flex align-items-center">
-                <button type="button" class="btn btn-primary"><i class="bi bi-cart"></i></button>
+                <a class="nav-link active" aria-current="page" href="{% url 'Contactoi' %}">Contacto</a>
               </li>
             </ul>
+            <form class="d-flex" role="search">
+              <li class="nav-item">
+                <a href="{% url 'login' %}" class="btn btn-outline-primary">
+                  <i class="bi bi-door-open"></i> Iniciar Secion
+                </a>
+              </li>
+            </form>
           </div>
         </div>
       </nav>
