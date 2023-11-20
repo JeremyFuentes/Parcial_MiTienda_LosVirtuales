@@ -4,11 +4,11 @@
 
 {% block titulo %}
   <title>Crear cuenta admin</title>
-  <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
 {% endblock %}
 
 {% block contenido %}
-
+<div class="container">
   <div class="container mt-5">
     <div class="row justify-content-center">
       <div class="col-md-6">
@@ -26,9 +26,9 @@
       </div>
     </div>
   </div>
-  <div class="row justify-content-center mt-3">
-    <div class="col-md-1">
-      <div class="card-footer text-muted align-content-center text-center d-flex">
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-2">
+      <div class="card-footer text-muted align-content-center text-center">
         <a href="{% url 'ajustes' %}" class="btn btn-info">Volver <i class="bi bi-backspace"></i></a>
       </div>
       <br><br>

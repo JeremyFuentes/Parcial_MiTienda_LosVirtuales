@@ -6,16 +6,6 @@
   <title>Inicio Los Virtuales</title>
 
   <link rel="stylesheet" href="{% static 'css/index.css' %}" />
-  <style>
-    body {
-        background: linear-gradient(black, skyblue);
-
-        height: 100%;
-        margin: 0;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-  </style>
 {% endblock %}
 
 {% block contenido %}
@@ -35,24 +25,6 @@
       </div>
     </div>
   </div>
-  <style>
-    .card-custom {
-      border: none;
-      box-shadow: none;
-      background-color: transparent;
-      text-align: center;
-    }
-    .img-container {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      padding: 10px; 
-    }
-    .img-container img {
-      width: 50px; 
-    }
-  </style>
-  
 
   <br />
   <div class="row justify-content-center" style="align-items: center; " >
@@ -90,52 +62,9 @@
         </div>
       </div>
 </div>
-<br />
-<hr style="border: none; border-top: 1px solid white;">
-  
 
-  <div class="row justify-content-center" style="align-items: center; ">
-    <div class="col-md-4 mb-3 mb-sm-0">
-      <div class="card" style="border: none; box-shadow: none; background-color: transparent;">
-        <div class="card-body" style="background-color: transparent;">
-          <h3 class="card-title" style="color: white; text-align:center">Tambien puedes pedir al telefono</h3>
-          <p class="card-text" style="color: white; text-align:center">4758-8564</p>
-        </div>
-      </div>
-    </div>
+<div>
+  {% include "fin.html" %}
+</div>
 
-    <div class="col-md-4">
-        <div class="card" style="border: none; box-shadow: none; background-color: transparent;">
-          <div class="card-body" style="background-color: transparent;">
-            <h3 class="card-title" style="color: white; text-align:center">Tienda los Virtuales</h3>
-            <p class="card-text" style="color: white; text-align:center">En donde puedes comprar lo que tú quieras</p>
-          </div>
-        </div>
-      </div>
-    <div class="col-md-4">
-      <div class="card card-custom">
-        <div class="card-body" style="background-color: transparent;">
-          <h3 class="card-title" style="color: white;">Siguenos en:</h3>
-          <div class="img-container">
-            <a href="enlace1.html">
-              <img src="{% static 'img/Facebook.png' %}" alt="Imagen 1">
-            </a>
-            <a href="enlace2.html">
-              <img src="{% static 'img/Instagram.png' %}" alt="Imagen 2">
-            </a>
-            <a href="enlace3.html">
-              <img src="{% static 'img/Youtube.png' %}" alt="Imagen 3">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  
-  <hr style="border: none; border-top: 1px solid white;">
-  <br />
-  <h4 class="card-title" style="color: white; text-align:center">¡Puedes enviarnos tus sugerencias al correo TuTiendaVirtual@gmail.com!</h4>
-  <br />
-  
 {% endblock %}

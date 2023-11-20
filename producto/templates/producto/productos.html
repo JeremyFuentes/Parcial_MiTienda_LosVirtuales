@@ -5,11 +5,14 @@
 {% block titulo %}
   <title>Productos</title>
   <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 {% endblock %}
 
 {% block contenido %}
   <div class="container">
     <div class="row">
+      <div style="color: white; background-color: transparent;">
       <div class="col-lg-12 text-center">
         <br />
         <h1><b><i>Listado de Productos</i></b></h1>
@@ -18,7 +21,7 @@
           <a href="{% url 'crear_producto' %}" class="btn btn-success">Nuevo Producto <i class="bi bi-plus-circle"></i></a>
         </div>
         <br>
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover" style="background-color: black">
           <thead>
             <tr>
               <th scope="col">id</th>
@@ -55,14 +58,42 @@
 
   <script>
     function confirmarEliminacion(productoId) {
-      var respuesta = confirm("¿Estás seguro de que deseas eliminar este producto?");
-      if (respuesta == true) {
-        var eliminarUrl = "{% url 'eliminar_producto' 0 %}".replace('0', productoId);
-        window.location.href = eliminarUrl;
-      } else {
-        // Operación cancelada
-      }
+      Swal.fire({
+        title: '¿Deceas eliminar este producto?',
+        text: 'No podrás revertir esto.',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Sí, eliminarlo'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          var eliminarUrl = "{% url 'eliminar_producto' 0 %}".replace('0', productoId);
+          window.location.href = eliminarUrl;
+        }
+      });
     }
   </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.style.opacity = 1;
+  
+      document.querySelectorAll('a[href^="/"]').forEach(function (anchor) {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+  
+          const href = this.getAttribute("href");
+  
+          document.body.classList.add("fade-out");
+  
+          setTimeout(function () {
+            window.location.href = href;
+          }, 500);
+        });
+      });
+    });
+  </script>
+  <div>
+    {% include "fin.html" %}
+  </div>
 {% endblock %}
-
