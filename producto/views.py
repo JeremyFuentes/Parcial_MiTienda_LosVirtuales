@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import Productos, Contacto, Admin, Usuarios
 from .forms import ProductosForm, ContactoForm, UsuariosForm, AdminForm
 
+
 # Create your views here.
 def inicio(request):
     return render(request, 'pages/inicio.html')
@@ -128,7 +129,7 @@ def crear_usuario_admin(request):
     formadmin = AdminForm(request.POST or None)
     if formadmin.is_valid():
        formadmin.save()
-       return redirect('agregaradmin')
+       return redirect('AdminCreado')
     return render(request, 'loginadmin/Crearcuenta.html', {'formadmin':formadmin})
 
 def crear_cuenta(request):
