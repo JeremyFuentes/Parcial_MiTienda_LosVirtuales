@@ -1,10 +1,10 @@
 #myTable, #myTable th, #myTable td {
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0);
     color: white;
   }
 
 #Tabla1, #Tabla1 th, #Tabla1 td {
-    background-color:transparent;
+    background-color: rgba(255, 255, 255, 0);
     color: white;
   }  
 
