@@ -15,11 +15,14 @@
         <br />
         <h1><b><i>Listado de Productos Inicio</i></b></h1>
         <hr />
-        <div class="row">
+        <div class="row justify-content-center" style="align-self: center;">
          {% for Productos in productosi %}
-            <div class="col-md-3 mb-2 mb-sm-0  product-container" style="margin-right: 10px;">
+            <div class="col-md-3 mb-2 mb-sm-0  product-container" style="margin-right: 15px; margin-top: 15px;">
                <div class="card">
-                  <img src="{{ Productos.imagen.url }}" height="100" />
+                <div style="align-items: center;">
+                  <img src="{{ Productos.imagen.url }}" width="200" />
+                </div>
+                  
                   <div class="card-body">
                      <h5>{{ Productos.nombre }}</h5>
                      <p>{{ Productos.descripcion }}</p>

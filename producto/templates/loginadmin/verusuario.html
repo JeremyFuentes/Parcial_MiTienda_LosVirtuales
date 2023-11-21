@@ -5,6 +5,7 @@
 {% block titulo %}
   <title>Productos</title>
   <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/tablas.css' %}" />
 {% endblock %}
 
 {% block contenido %}
@@ -16,7 +17,7 @@
         <h1><b><i>Listado de Usuarios</i></b></h1>
         <hr />
         <br>
-        <table class="table table-bordered table-hover">
+        <table id="myTable" class="table table-bordered table-hover">
           <thead>
             <tr>
               <th scope="col">id</th>

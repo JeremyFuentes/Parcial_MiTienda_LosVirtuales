@@ -1,0 +1,13 @@
+#myTable, #myTable th, #myTable td {
+    background-color: transparent;
+    color: white;
+  }
+
+#Tabla1, #Tabla1 th, #Tabla1 td {
+    background-color:transparent;
+    color: white;
+  }  
+
+::placeholder {
+    color: rgb(245,245,245) !important;
+}

@@ -4,7 +4,7 @@ h1 {
 }
 
 body {
-    background: linear-gradient(black, skyblue);
+    background: linear-gradient(black, rgb(135, 178, 235));
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
